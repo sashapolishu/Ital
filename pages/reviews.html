@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="heade">
+            <div class="container">
+                <div class="header-header flex-space-between flex-align-center">
+                    <img src="../img/logoDark.svg" alt="">
+                    <nav class="menu flex-space-between">
+                        <a href="../pages/media.html" class="menu__item menu__item-pages">Медиа</a>
+                        <a href="../pages/about.html" class="menu__item menu__item-pages">О нас</a>
+                        <a href="#footer" class="menu__item menu__item-pages">Контакты</a>
+                        <a href="../pages/reviews.html" class="menu__item menu__item-pages">Отзывы</a>
+                        <a href="../pages/services.html" class="menu__item menu__item-pages">Услуги</a>
+                    </nav>
+                    <div class="menu-burger column-space-between ">
+                        <span class="menu-burger__line menu-burger__line1"></span>
+                        <span class="menu-burger__line menu-burger__line2"></span>
+                        <span class="menu-burger__line menu-burger__line3"></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main reviews containe">
+            <h2 class="reviews-title title container">Отзывы наших клиентов</h2>
+            <div class="swiper-reviews swiper">
+                <div class="swiper-button-prev prev"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../img/reviews1.jpg" alt=""></div>
+                    <div class="swiper-slide slide2"><img src="../img/reviews2.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../img/reviews3.jpg" alt=""></div>
+                </div>
+                <div class="swiper-button-next next"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <h2 class="title form-title container">Заказывали проект у нас?</h2>
+            <h5 class="form-sub-title container">Оставьте ваш отзыв в форме ниже и мы его опубликуем на нашем сайте</h5>
+            <form action="label" class="reviews-form container">
+                <input type="text" class="name form-active" placeholder="Ваше имя">
+                <input type="text" class="number form-active" placeholder="Номер телефона">
+                <button class="send yellow-btn">Отправить</button>
+                <textarea name="review" id="review" cols="30" rows="10" class="review form-active" placeholder="Ваш отзыв"></textarea>
+            </form>
+        </main>
+        <footer class="footer" id="footer">
+            <div class="footer-container container">
+                <div class="footer__contacts flex-space-between">
+                    <img src="../img/Logo_Ital_white1.svg" alt="logo" class="footer__logo">
+                    <ul class="footer__footer-info column-space-between">
+                        <li>
+                            <h5 class="footer-info__title">Информация</h5>
+                        </li>
+                        <li class="footer-info__item"> <a href="#">Загородные дома </a></li>
+                        <li class="footer-info__item"> <a href="#">Квартиры</a></li>
+                        <li class="footer-info__item"> <a href="#">Нежилые помещения </a></li>
+                        <li class="footer-info__item"> <a href="#">Медиафайлы </a></li>
+                        <li class="footer-info__item"> <a href="#">О компании </a></li>
+                    </ul>
+                    <div class="contacts column-space-between">
+                        <h5 class="footer-info__title">Контакты</h5>
+                        <a href="#380(499)409-16-12" class="contacts__phone flex">
+                            <img src="../img/phone.svg" alt="phone icon"> + 380 (499) 409-16-12
+                        </a>
+                        <a href="#italproekt@gmail.com" class="contacts__mail flex">
+                            <img src="../img/mail.svg" alt="mail icon"> italproekt@gmail.com
+                        </a>
+                    </div>
+                    <div class="footer__social">
+                        <h5 class="footer-info__title">Соц. сети</h5>
+                        <ul class="social-container flex-space-between">
+                            <li class="icon icons"><a href="#"></a></li>
+                            <li class="icon1 icons"><a href="#"></a></li>
+                            <li class="icon2 icons"><a href="#"></a></li>
+                            <li class="icon3 icons"><a href="#"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__footer flex-space-between flex-align-center">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">designed by Linar</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+
+
+        const swiper = new Swiper('.swiper-reviews', {
+            // Optional parameters
+
+            // direction: 'vertical',
+            loop: true,
+
+            // If we need pagination
+
+            pagination: {
+                //   el: '.swiper-pagination',
+            },
+            slidesPerView: 1,
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            spaceBetween: 140,
+            // And if we need scrollbar
+
+            scrollbar: {
+                //   el: '.swiper-scrollbar',
+            },
+            breakpoints:{
+                960:{
+                    slidesPerView: 3,
+                    spaceBetween: 140,
+                },
+                610:{
+                    // spaceBetween:0,
+                    slidesPerView:2,
+                }
+            },
+        });
+
+
+    </script>
+</body>
+
+</html>
